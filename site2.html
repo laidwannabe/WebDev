@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>UNIX</title>
+</head>
+<body>
+    <header>
+        <h1>UNIX</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="lb4.html">Скорочена довідка</a></li>
+            <li><a id="current" href="lb42.html">Історія</a></li>
+            <li><a href="lb43.html">Стандарти</a></li>
+            <li><a href="lb44.html">Файлова система Unix</a></li>
+            <li><a href="lb45.html">Канонічні команди Unix</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <aside>
+            <table class="infbox">
+                <caption><b>Unix</b></caption>
+                <tbody>
+                    <tr><td colspan="2" class="infimg"><img id="imginf" src="imgs/unix.jpg"></td></tr>
+                    <tr><th class="infboxlable">Розробник</th><td class="infboxdata">Кен Томпсон, Денніс Річі, Браян Керніган, Дуглас Макілрой і Джо Оссанна в Bell Labs</td></tr>
+                    <tr><th class="infboxlable">Написано на</th><td class="infboxdata">C та Assembly</td></tr>
+                    <tr><th class="infboxlable">Сімейство ОС</th><td class="infboxdata">Unix</td></tr>
+                    <tr><th class="infboxlable">Модель вихідного коду</th><td class="infboxdata">Історично пропрієтарне ПЗ, але деякі проєкти — з відкритим кодом</td></tr>
+                    <tr><th class="infboxlable">Початковий випуск</th><td class="infboxdata">1969 р. — початок розробки, 1971 — внутрішній посібник, 1973 — публічне оголошення</td></tr>
+                    <tr><th class="infboxlable">Доступно мовами</th><td class="infboxdata">Англійська</td></tr>
+                    <tr><th class="infboxlable">Тип Kernel</th><td class="infboxdata">Монолітний, мікрокернел, гібридний</td></tr>
+                    <tr><th class="infboxlable">Надихнувся від</th><td class="infboxdata">CTSS, Multics</td></tr>
+                    <tr><th class="infboxlable">Інтерфейс користувача</th><td class="infboxdata">CLI та GUI (Wayland, X Window System, Android SurfaceFlinger, macOS Quartz)</td></tr>
+                    <tr><th class="infboxlable">Ліцензія</th><td class="infboxdata">Пропрієтарна або вільна</td></tr>
+                </tbody>
+            </table>
+        </aside>
+        <div id="content">
+            <h2>Історія створення</h2>
+            <h3>Попередники</h3>
+            <p>У 1957 році Bell Labs розпочала створення операційної системи для власних потреб. Під керівництвом Віктора Висоцького була створена система BESYS. Після цього він керував проєктом Multics.</p>
+            <p>У 1964 році з'явилися комп'ютери третього покоління. Bell Labs вирішили долучитись до проєкту MULTICS. Але у 1969 році вийшли з проєкту через відсутність прибутку.</p>
+
+            <h3>Перші Unix</h3>
+            <p>UNIX розробили наприкінці 1960-х років у Bell Labs — Кен Томпсон, Денніс Рітчі, Дуглас Макілрой. Перша версія створена у 1969 р. для DEC PDP-7, називалась UNICS. У 1970 р. вийшла версія для PDP-11.</p>
+            <p>У 1973 р. ядро переписали мовою Сі. 15 жовтня на симпозіумі ACM представили четверту версію UNIX. З 1974 р. система стала доступна університетам.</p>
+            <p>До 1975 року з'явилась UNIX Version 6, до 1978 — UNIX працювала на 600 машинах. Версія 7 стала останньою "єдиною" версією, в якій з’явився Bourne shell.</p>
+
+            <h3>Розкол</h3>
+            <p>Після успіху в освіті AT&T вирішила заборонити освітнє використання UNIX. Це дало поштовх до появи Minix — сумісної, але відкритої системи.</p>
+            <figure class="imgdesc">
+                <img id="img4" src="imgs/kd.jpeg">
+                <figcaption class="caption">
+                    <p>Кен Томпсон та Денніс Рітчі</p>
+                </figcaption>
+            </figure>
+            <p>У 1977 р. в університеті Берклі створили BSD — зрілу систему на базі UNIX V6. Через суд з AT&T BSD перетворилася на FreeBSD.</p>
+            <p>У 1982 р. AT&T випустила комерційну версію UNIX — System III, а згодом System V.</p>
+            <p>У 1980-х роках UNIX отримав TCP/IP. З'явились два API: Berkeley sockets та TLI. System V версії 4 отримав офіційну підтримку TCP/IP. Це призвело до розділення на дві гілки: BSD і System V. Компанії почали ліцензувати System V: AIX, HP-UX, IRIX, Solaris.</p>
+            <figure class="imgdesc">
+                <img id="img5" src="imgs/linus.jpg">
+                <figcaption class="caption">
+                    <p>Лінус Торвальдс</p>
+                </figcaption>
+            </figure>
+            <h3>Вільні UNIX-подібні ОС</h3>
+            <p>У 1983 р. Річард Столлмен оголосив про проєкт GNU — вільна UNIX-подібна ОС. Основні компоненти створені, але ядро GNU Hurd не завершене.</p>
+            <p>У 1991 р. Лінус Торвальдс опублікував ядро Linux. Поєднання Linux і GNU стало основою сучасних UNIX-подібних систем, відомих як Linux-дистрибутиви.</p>
+        </div>
+    </div>
+</body>
+</html>

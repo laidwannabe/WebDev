@@ -1,0 +1,272 @@
+body{
+    background-color: rgb(15, 15, 15);
+    color: azure;
+    margin:0px;
+}
+header,footer,#main{
+    margin:20px;
+}
+header h1{
+     font-size:54px;
+}
+#content{
+   width:100%;
+}
+nav ul{
+background-color: blueviolet;
+padding: 0px;
+margin: 0px;
+list-style-type: none;
+overflow:hidden;
+justify-content: space-around;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding:15px;
+    display: block;
+    text-align: center;
+}
+nav li{
+    float:left;
+    flex: 1;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+     margin-bottom: 10px;
+    color: azure;
+}
+p,li,caption{
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: azure;
+}
+td,th{
+  font-family: "Mulish&quot", sans-serif;  
+
+}
+#img1,#img2,#img3,#img4,#img5{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    clear: both;
+    padding: 20px;  
+   
+}
+#img2{
+   
+    width:600px;
+    height:300px;
+}
+#img3{
+    width:600px;
+    height:350px;
+}
+#img4{
+    width:500px;
+    height:300px;
+   
+}
+#img5{
+    width:250px;
+    height:350px;
+   
+}
+nav li #current{
+    background-color:rgb(122, 37, 202);
+}
+nav li :not(#current):hover{
+    color: rgb(219, 219, 219);
+    background-color: rgb(126, 37, 209);
+}
+footer{
+    display: block;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    clear: both;
+}
+footer a{
+    color: azure;
+    font-size: 24px;
+
+    text-decoration: none;
+    bottom: 0;
+}
+footer a:hover{
+    color: rgb(200, 200, 200);
+}
+.infbox{
+    border: 1px solid #a2a9b1;
+    padding: 0.2em;
+    font-size: 14px;
+    line-height: 1.5em;
+    border-spacing: 3px;
+    float:right;
+    width:25%;
+    background-color: rgb(23, 23, 23);
+    margin-left: 20px;
+}
+
+aside h4 {
+    color: azure;
+    margin-bottom: 15px;
+}
+aside ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+aside th {
+    white-space: nowrap;
+    vertical-align: top;
+    font-weight: bold;
+    padding-right: 3px;
+}
+aside td{
+    white-space:normal;
+    text-align: left;  
+}
+td.infimg #imginf{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:400px;
+    height:200px;
+}
+.imgdesc{
+
+    float: right;
+    display: table;
+    border: 1px solid #a2a9b1;
+    text-align: center;
+    margin-right: 0px;
+    background-color: rgb(23, 23, 23);
+}
+.caption{
+    display: table-caption;
+    caption-side: bottom;
+    line-height: 1.4em;
+    word-break: break-word;
+    text-align: start;
+    padding: 0 6px 6px 6px;
+    border:1px solid #a2a9b1;
+    border-collapse: collapse;
+    background-color: rgb(23, 23, 23);
+}
+@media screen and (min-width: 1024px) {
+    .infbox {
+        width: 25%;
+    }
+}
+@media screen and (max-width:873px) {
+    .infbox{
+        width:40%;
+    }
+    header{
+    text-align: center;
+}
+  .navbar{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar ul{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+  }
+  .navbar li{
+    margin:10px 0;
+  }
+  nav li #current{
+    background-color:rgb(122, 37, 202);
+
+}
+   #img1, #img2, #img3, #img4 {
+        width:90%;
+}
+    #img5{
+        width:60%;
+    }
+.imgdesc{
+    width: 50%;
+}
+  li{
+    margin-top: 10px;
+  }
+ 
+}
+@media screen and (max-width:768px){
+        header, footer, #main {
+        margin: 10px;
+    }
+    .infbox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .infbox caption{
+        font-size: 18px;
+    }
+    .imgdesc{
+        margin:10px;
+        max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin: 20px;
+    }
+    p, li, caption {
+        font-size: 1em;
+        margin: 0;
+    }
+   
+}
+@media screen and (max-width:620px) {
+       h1 {
+        font-size: 1.5em;
+
+    }
+    nav a {
+        margin: 0 auto;
+        padding: 15px;
+    }
+    #main {
+        flex-direction: column;
+    }
+    .imgdesc  {
+        max-width: 20%;
+        height: auto;
+        display: none;
+    }
+    #img1, #img2, #img3, #img4, #img5 {
+        display: none;
+}
+}
+@media screen and (max-width: 435px) {
+   h1,h2,h3{
+    margin: 10px 5px 10px;
+   }
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        font-size: 16px;
+    }
+    nav a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .infbox, #content, aside {
+        width: 100%;
+        float: none;
+        margin: 0;
+
+}
+img {
+ max-width: 100%;
+ height: auto;
+}
+}

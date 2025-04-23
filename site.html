@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <title>UNIX</title>
+</head>
+<body>
+    <header>
+        <h1>Unix</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a id="current" href="lb4.html">Скорочена довідка</a></li>
+            <li><a href="lb42.html">Історія</a></li>
+            <li><a href="lb43.html">Стандарти</a></li>
+            <li><a href="lb44.html">Файлова система Unix</a></li>
+            <li><a href="lb45.html">Канонічні команди Unix</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <aside>
+            <table class="infbox">
+                <caption><b>Unix</b></caption>
+                <tbody>
+                    <tr>
+                        <td colspan="2" class="infimg">
+                            <img id="imginf" src="imgs/unix.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Розробник</th>
+                        <td class="infboxdata">Кен Томпсон, Денніс Річі, Браян Керніган, Дуглас Макілрой і Джо Оссанна в Bell Labs</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Написано на</th>
+                        <td class="infboxdata">C та Assembly</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Сімейство ОС</th>
+                        <td class="infboxdata">Unix</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Модель вихідного <br> коду</th>
+                        <td class="infboxdata">Історично пропрієтарне програмне забезпечення, хоча деякі проєкти Unix (включаючи родину BSD та illumos) є з відкритим вихідним кодом.</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Початковий випуск</th>
+                        <td class="infboxdata">
+                            Початок розробки в 1969 році<br>
+                            Перший посібник був опублікований внутрішньо в Листопаді 1971 року <br>
+                            Оголошено за межами Bell Labs у Жовтні 1973 року
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Доступно мовами</th>
+                        <td class="infboxdata">Англійська</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Тип Kernel</th>
+                        <td class="infboxdata">Варіюється; монолітний, мікрокернел, гібридний</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Надихнувся від</th>
+                        <td class="infboxdata">CTSS, Multics</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Інтерфейс користувача <br> за замовченням</th>
+                        <td class="infboxdata">Командний інтерфейс і графічний інтерфейс (Wayland та X Window System; Android SurfaceFlinger; macOS Quartz).</td>
+                    </tr>
+                    <tr>
+                        <th class="infboxlable">Ліцензія</th>
+                        <td class="infboxdata">Варіюється; деякі версії є пропрієтарними, інші — вільним або відкритим програмним забезпеченням.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </aside>
+
+        <div id="content">
+            <h2>Скорочена довідка</h2>
+            <p>
+                UNIX® (Ю́нікс) — це сімейство багатозадачних комп'ютерних операційних систем, що підтримують одночасне використання багатьма користувачами. Воно походить від оригінального «AT&T Unix», розробленого впродовж 1970-х років у дослідницькому центрі Bell Labs Кеном Томпсоном, Деннісом Рітчі та іншими.
+            </p>
+            <p>
+                Спочатку Unix був призначений для використання в Bell System. Але пізніше, наприкінці 1970-х, AT&T ліцензувала його для сторонніх організацій. Це зумовило виникнення різноманітних академічних і комерційних варіантів Unix під різними торговими марками, такими як Каліфорнійський університет, Берклі (BSD), Microsoft (Xenix), Sun Microsystems (SunOS/Solaris), HP/HPE (HP-UX) та IBM (AIX). На початку 1990-х AT&T продала свої права на Unix компанії Novell, яка 1995 року продала його Santa Cruz Operation (SCO). Торгова марка UNIX була передана The Open Group, нейтральному галузевому консорціуму, заснованому 1996 року. Він дозволяє використовувати торгову марку для сертифікованих операційних систем, що відповідають єдиній специфікації UNIX (Single UNIX Specification, SUS). Однак Novell продовжує володіти авторськими правами на Unix, що було підтверджено судовою справою SCO Group, Inc. проти Novell, Inc. (2010).
+            </p>
+            <p>
+                Для систем Unix характерний модульний дизайн, який іноді називають «філософією Unix». Відповідно до цієї філософії, операційна система повинна забезпечувати набір простих інструментів, кожен з яких виконує обмежену, чітко визначену функцію. Уніфікована файлова система (файлова система Unix) та міжпроцесорний механізм зв'язку, відомий як «конвеєр» («pipe»), створюють основу для комунікації, а інтерпретатор команд командної оболонки дає змогу писати скрипти, що поєднує ці інструменти для виконання складних задач.
+            </p>
+            <p>
+                Unix відрізнявся від своїх попередників тим, що був першою портативною операційною системою. Майже вся операційна система написана мовою програмування C, що дозволяє їй працювати на різних платформах.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="bob.html">Шевченко Родіон</a></p>
+    </footer>
+</body>
+</html>
