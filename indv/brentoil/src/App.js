@@ -21,9 +21,11 @@ function App() {
   const [selectedMonth, setSelectedMonth] = useState('01');
   const [price, setPrice] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false); 
 
   useEffect(() => {
     const fetchPrice = async () => {
+      setLoading(true); 
       try {
         const API_KEY = 'eUJcWtfa8yXr0CSf1f9RQYbFpmsgbtDFP0DgAIYU';
         const response = await axios.get('https://api.eia.gov/v2/seriesid/PET.RBRTE.M', {
@@ -47,6 +49,8 @@ function App() {
         console.error(err);
         setError('Помилка при отриманні даних з EIA');
         setPrice(null);
+      } finally {
+        setLoading(false); 
       }
     };
 
@@ -56,6 +60,7 @@ function App() {
   return (
     <div className="App">
       <h1 id="Title">Котирування Brent за 2025 рік 🌍🛢</h1>
+
       <select onChange={(e) => setSelectedMonth(e.target.value)} value={selectedMonth}>
         {months.map((month) => (
           <option key={month.value} value={month.value}>
@@ -63,8 +68,10 @@ function App() {
           </option>
         ))}
       </select>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {price && <p style={{ color: 'aliceblue' }}>Середня ціна: {price} USD/барель</p>}
+
+      {loading && <p style={{ color: 'gold' }}>Завантаження...</p>} 
+      {error && !loading && <p style={{ color: 'red' }}>{error}</p>}
+      {price && !loading && <p style={{ color: 'aliceblue' }}>Середня ціна: {price} USD/барель</p>}
     </div>
   );
 }
